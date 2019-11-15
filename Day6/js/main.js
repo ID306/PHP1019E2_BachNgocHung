@@ -1,0 +1,1 @@
+document.write("Code jx được nhứng từ file bên ngoài");

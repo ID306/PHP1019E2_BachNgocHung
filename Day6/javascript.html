@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Day6</title>
+</head>
+<body>
+
+	<!-- Chú ý nên đặt mã Js mà các bạn viết ở cuối trang, cụ thể trước thẻ đóng body -->
+	<p onclick="alert('Hello Javascript')">Click vào thẻ p</p>
+	<!-- <p onmouseenter="alert('Hover qua thẻ p')">Rê chuột qua</p> -->
+
+	<script type="text/javascript">
+		document.write("hello javascript 2");
+	</script>
+	<br>
+	<script type="text/javascript" src="js/main.js"></script>
+
+	<script type="text/javascript">
+		//Chương trình Js đầu tiên
+		document.write("<h1>Hello night</h1>");
+		document.write("<h1>Các khái niệm lập trình</h1>");
+		
+		//Biến trong Js 
+		var name;
+		var age = 15;
+		var name1, nam2, name = "abc";
+
+		//toán tử nối chuỗi trong js là toán tử +
+		var username = "bnHung";
+		var password = "123456";
+		var undefined = null;
+
+		var name1 = "Hung";
+		var age = 28;
+		var address = "Ha Noi";
+
+		document.write("Tên là: " + name1 + "<br>");
+		document.write("Tuổi: " + age + "<br>");
+		document.write("Địa chỉ: " + address + "<br>");
+
+		//Hằng
+		const AGE = 28;
+		document.write("Hằng AGE đang có giá trị là: " + AGE + "<br>");
+
+		//Kiểu dữ liệu trong Js
+		//Kiểu số
+		var number1 = 123;
+		var number2 = 1.23;
+		console.log("Số number1 đang có giá trị là: " + number1);
+
+		console.log(typeof number1);
+		//Kiểu chuỗi - string
+		var name = "Hưng";
+		var address = "HaNoi";
+		document.write("Biến name có kiểu dữ liệu là: " + typeof name + "<br>");
+
+		//kiểu dữ liệu boolean - true/false
+		var is_true = true;
+		var is_false = false;
+		document.write("Biến is_true có kiểu dữ liệ là: " + typeof is_true + "<br>");
+
+
+		//Kiểu underfined
+		//khai báo biến mà không gán giá trị
+		var x1;
+		document.write(typeof x1 + "<br>");
+
+
+		//Kiểu mảng - array
+		//Js sẽ coi mảng là 1 object
+		var arr1 = [1,"abc", true,[1,2]];
+		document.write(typeof arr1 + "<br>");
+
+		//Kiểu đối tượng - object
+		var obj1 = {
+			name : "abc",
+			age: 28,
+			study: function(){
+				document.write("Studying");
+			}
+		}
+
+		document.write(typeof obj1 + "<br>");
+
+		document.write("<h1>Hàm - Function</h1>");
+
+		//Khai báo hàm
+		function display(){
+			document.write("Đây là nội dung bên trong function");
+		}
+		//gọi hàm
+		display();
+
+		//phân loại hàm
+		//Hàm có sẵn
+		// document.write(""), alert()
+
+		//Hàm tự định nghĩa
+		//Hàm có tham số
+		function displayName(name) {
+			document.write("tôi tên là " + name + "<br>");
+		}
+
+		displayName('Hưng');
+		displayName('Bạch');
+		displayName('Ngọc');
+
+
+		function sum(number1 = 1, number2 = 5){
+			var sum = number1 + number2;
+			document.write("Tổng 2 số = " + sum + "<br>");
+		}
+		sum(2,3);
+
+		//hàm có giá trị trả về
+		//sử dụng return 
+		function sum1(number1, number2) {
+			var sum = number1 + number2;
+
+			return sum;
+		}
+
+		var sum = sum1(1,2);
+		document.write("Giá trị sum = " + sum +"<br>");
+
+
+		//Hàm có sẵn trong javascript
+		document.write("document write" + "<br>")
+		console.log("console log")
+		// alert("alett")
+		// var number1 = prompt("Nhập vào số a")
+		// var number2 = prompt("Nhập vào số b")
+		// document.write("Số number1 vừa nhập = " + number1 +"<br>");
+		// document.write("Số number2 vừa nhập = " + number2 + "<br>");
+
+		// var sum = number1+ number2
+		// document.write("Tổng 2 số là: " + sum +"<br>")
+
+		// var is_confirm = confirm("Có chắc chắn muốn xóa không?");
+		// if (is_confirm == true) {
+		// 	document.write("thực hiện xóa");
+		// }
+		// else {
+		// 	document.write("Không làm gì cả");
+		// }
+
+
+
+
+
+
+	</script>
+
+	<p id="p=id">
+		Thẻ hihihihihi
+		<a style="color:red">Thẻ aaaaaa</a>
+	</p>
+	<script type="text/javascript">
+		// var content_p = document.getElementById('p-id').innerHTML;
+		var obj_p = document.getElementById('p-id');
+		var content_p = obj_b.innerHTML;
+		document.write("Nội dung thẻ P vừa lấy được = " + content_p + "<br>");
+		
+		var content_p_text = obj_p.innerText;
+		document.write("Nội dung thẻ p lấy theo text = " + content_p_text + "<br>");
+
+
+		//set nội dung
+		obj_p.innerHTML = "<b>Nội dung thẻ p mới </b>";
+
+		obj_p.innerText = "<b>Nội dung thẻ p mới </b>";
+
+		document.write("<h1>Sự kiện trong Js</h1>");
+
+		//Các cách gọi sự kiện trong Js
+		//1- Gọi trực tiếp trong thẻ HTML
+
+	</script>
+	<select onchange="alert('selected')">
+		<option>Name1</option>
+		<option>Name2</option>
+		<option>Name3</option>
+	</select>
+	<p id="p-click">
+		Thẻ p sử dụng sự kiện theo cách 2
+	</p>
+
+	<script type="text/javascript">
+		var obj_p = document.getElementById('p-click');
+		//gán sự kiện cho đối tượng vừa tìm được
+		function handleClick (){
+			alert("Clicked");
+		}
+		//truyền hàm theo hiểu callback - truyên tham số lại là 1 hàm khác
+		//sẽ chờ sự kiện click chạy xong thì ới chạy hàm handleclick
+		// obj_p.addEventListener('click', handleClick());
+
+		obj_p.addEventListener('click',function(){
+			alert("123");
+		})
+	</script>
+	<br>
+	<h1>Thực hành</h1>
+
+	<form action="" method="post" onsubmit="handleSubmit()">
+		Họ tên:
+		<input id="name" type="text" placeholder="Nhập tên của bạn"><br>
+		Tuổi:
+		<input id="age" type="number" placeholder="Nhập tuổi của bạn"><br>
+		<input type="submit" value="Hiện thị thông tin">
+	</form>
+	<div id="result" style="color: green">
+		
+	</div>
+	<script type="text/javascript">
+		function handleSubmit () {
+			
+		//lấy ra thông tin đối tượng
+			var obj_name = document.getElementById('name');
+			var name = obj_name.value;
+			var obj_age = document.getElementById('age');
+			var age = obj_age.value;
+			var obj_result = document.getElementById('result')
+			var string = "Tên vừa nhập: "+ name + "<br>";
+				string = string + "Tuổi vừa nhập: " + age;
+			obj_result.innerHTML = 
+		}
+	</script>
+</body>
+</html>
