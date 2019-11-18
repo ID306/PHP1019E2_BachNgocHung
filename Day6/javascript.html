@@ -203,7 +203,7 @@
 	<br>
 	<h1>Thực hành</h1>
 
-	<form action="" method="post" onsubmit="handleSubmit()">
+	<form action="" method="post" onsubmit="return handleSubmit()">
 		Họ tên:
 		<input id="name" type="text" placeholder="Nhập tên của bạn"><br>
 		Tuổi:
@@ -224,7 +224,9 @@
 			var obj_result = document.getElementById('result')
 			var string = "Tên vừa nhập: "+ name + "<br>";
 				string = string + "Tuổi vừa nhập: " + age;
-			obj_result.innerHTML = 
+			obj_result.innerHTML = string;
+
+			return false;
 		}
 	</script>
 </body>
