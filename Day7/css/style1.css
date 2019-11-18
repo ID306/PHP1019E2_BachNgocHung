@@ -1,0 +1,19 @@
+.dropdown-menu {
+	display: block;
+}
+.bt2{
+	width: 500px;
+}
+.hr {
+	width: 50px;
+}
+.top {
+	background: #0099ff;
+	text-align: center;
+}
+.bottom {
+	padding: 30px;
+}
+.top-content{
+	color: #fff;
+}
