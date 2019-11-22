@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Js BT5</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<form class="container" onsubmit="return checkPrimeNumber()">
+		<h2>Kiểm tra số nguyên tố</h2>
+  		<div class="form-group">
+   			<label>Nhập vào số a :</label>
+   			<input type="number" class="form-control" id="prime">
+  		</div>
+      <input type="submit" class="btn btn-primary" value="Kiểm tra">
+		  <div id="result" style="color:green"></div>
+
+  		
+  	<script type="text/javascript">
+  		function checkPrimeNumber(){
+  			var result = '';
+  			var obj_prime = document.getElementById('prime');
+  			var prime = obj_prime.value;
+
+  			if (prime < 2) {
+  				result = "Số " + prime + " không là số Nguyên Tố";
+  			}
+  			else { 
+          var is_prime = true;
+          for(var i = 2; i <= Math.sqrt(prime); i++) {
+            if (prime % i == 0) {
+              is_prime = false;
+              break;
+            }
+          }
+          if (is_prime) {
+            result = "Số " + prime + " là số Nguyên Tố";
+          }
+  				else {
+            result = "Số " + prime + " không là số Nguyên Tố";
+          }
+  			}
+
+  			document.getElementById('result').innerHTML = result;
+
+  			return false;
+  		}
+  	</script>
+
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Thực hành Day 8</title>
+</head>
+<body>
+	<form onsubmit="return sendInfo()">
+		Name:
+		<input type="text" id="name">
+		<br>
+		Email:
+		<input type="text" id="email">
+		<br>
+		Country:
+		<select id="country">
+			<option value = "-1">Select-country</option>
+			<option value = "1">Viet Nam</option>
+			<option value = "2">Japan</option>
+			<option value = "3">USA</option>
+		</select>
+		<br>
+		Gender:
+		<input type="radio" name="gender" value="1">Male
+		<input type="radio" name="gender" value="2">Female
+		<br>
+		<input type="submit" value="Send Info">
+	</form>
+	<div id="error" style="color: red"></div>
+	<div id="result" style="color: green"></div>
+
+	<script type="text/javascript">
+		function sendInfo(){
+			var error ='';
+			var result = '';
+
+			var obj_name = document.getElementById('name');
+			var name = obj_name.value;
+
+			var obj_email = document.getElementById('email');
+			var email = obj_email.value;
+
+			if(name == ''){
+				error = "Không được để trống name";
+				obj_name.focus();
+			}
+			else if (email == ''){
+				error = "Không được để trống email";
+				obj_email.focus();
+			}
+
+			document.getElementById('error').innerHTML = error;
+			document.getElementById('result').innerHTML = result;
+
+			return false;
+		}	
+	</script>
+</body>
+</html>

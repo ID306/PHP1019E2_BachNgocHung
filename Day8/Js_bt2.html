@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Js BT2</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<form class="container" onsubmit="return handleSubmit() ">
+		<h2>Nhập vào số a:</h2>
+  		<div class="form-group">
+   			<label>Nhập vào số a :</label>
+   			<input type="number" class="form-control" id="number">
+  		</div>
+
+  		<div id="error" style="color:red"></div>
+		<div id="result" style="color:green"></div>
+  		<input type="submit" class="btn btn-primary" value="Kiểm tra">
+
+  	<script type="text/javascript">
+  		function handleSubmit(){
+  			var error = '';
+  			var result = '';
+  			var obj_number = document.getElementById('number');
+  			var number = obj_number.value;
+
+  			if ((number >= 1 && number <=10)||(number>=50 && number <=100)) {
+  				result = "Số " + number + " nằm trong khoảng 1-10 hoặc 50-100"
+  			}
+  			else { 
+  				result = "Số " + number + " ÉO nằm trong khoảng 1-10 hoặc 50-100"
+  			}
+
+  			document.getElementById('result').innerHTML = result;
+
+  			return false;
+  		}
+  	</script>
+
+
+</body>
+</html>

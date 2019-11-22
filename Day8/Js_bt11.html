@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Js BT11</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style type="text/css">
+		
+	</style>
+</head>
+<body>
+	<form class="container" onsubmit="return GiaiThua()">
+		<h2>Tìm giai thừa</h2>
+  		<div class="form-group">
+   			<label>Nhập vào hệ số giai thừa:</label>
+   			<input type="number" class="form-control" id="number">
+  		</div>
+      <input type="submit" class="btn btn-primary" value="Tính Giai Thừa">
+		  <div id="result" style="color:green"></div>
+
+  		
+  	<script type="text/javascript">
+  		function GiaiThua(){
+  			var result = number + '! = 1 x ';
+  			var obj_number = document.getElementById('number');
+  			var number = obj_number.value;
+        var gt = 1;
+
+        for (var i = 2; i <= number; i++) {
+          gt*=i;
+          result += i;
+          if (i == number){
+            continue;
+          }
+          result += " x ";
+        }
+        result += "=" + gt;
+
+        document.getElementById('result').innerHTML = result;
+  			return false;
+  		}
+  	</script>
+
+</body>
+</html>

@@ -235,8 +235,13 @@
 				error = "Bắt buộc phải nhập số"
 			}
 			else {
-				var result = number1 + number2;
+				// var result = number1 + number2;
+				number1 = parseInt(number1);
+				number2 = parseInt(number2);
+				result = number1 + number2;
 			}
+
+
 			//set thông báo lỗi cho div có id là error
 			error_obj = document.getElementById('error');
 			error_obj.innerHTML =error;
