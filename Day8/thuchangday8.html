@@ -21,8 +21,8 @@
 		</select>
 		<br>
 		Gender:
-		<input type="radio" name="gender" value="1">Male
-		<input type="radio" name="gender" value="2">Female
+		<input type="radio" name="gender" id="gender_male" value="1">Male
+		<input type="radio" name="gender" id="gender_female" value="2">Female
 		<br>
 		<input type="submit" value="Send Info">
 	</form>
@@ -40,6 +40,18 @@
 			var obj_email = document.getElementById('email');
 			var email = obj_email.value;
 
+			var a_position = email.indexOf('@');
+			var dot_position = email.lastIndexOf('.');
+
+			var obj_country = document.getElementById('country');
+			var country = obj_country.value;
+
+			var obj_gender_male = document.getElementById('gender_male');
+			var gender_male = obj_gender_male.value;
+			var obj_gender_female = document.getElementById('gender_female');
+			var gender_female=obj_gender_female.value;
+
+
 			if(name == ''){
 				error = "Không được để trống name";
 				obj_name.focus();
@@ -47,6 +59,24 @@
 			else if (email == ''){
 				error = "Không được để trống email";
 				obj_email.focus();
+			}
+			else if (country == -1) {
+				error = "Cần phải chọn Country";
+				obj_country.focus();
+			}
+
+			else if(a_position == 0 || dot_position - a_position < 2) {
+				error = "Email không đúng định dạng, email ko cho phép ký tự @ đứng đầu tiên, và ký tự 				. cuối cùng không thể đứng trước ký tự @";
+				obj_email.focus();
+			}
+			else if (obj_gender_female.checked == false && obj_gender_male.checked == false){
+				error = "Cần tích vào Gender";
+				obj_gender_male.focus();
+			}
+			else {
+				//window.open("mailto:" + email);
+				//chuyển hướng người dùng tới trang ...
+				window.location = "http://google.com"
 			}
 
 			document.getElementById('error').innerHTML = error;
